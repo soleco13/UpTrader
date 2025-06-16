@@ -23,8 +23,9 @@ def get_active_items(menu_items, current_url):
     return active_items
 
 
-@register.inclusion_tag('tree_menu/menu.html')
-def draw_menu(menu_name):
+@register.inclusion_tag('tree_menu/menu.html', takes_context=True)
+def draw_menu(context, menu_name):
+    request = context['request']
     current_url = resolve(request.path).url_name or request.path
     
     # Получаем все пункты меню одним запросом

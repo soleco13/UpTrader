@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демонстрация меню</title>
+    <link rel="stylesheet" href="/static/tree_menu/css/menu.css">
+</head>
+<body>
+    <h1>Демонстрация древовидного меню</h1>
+    
+    <div class="menu-container">
+        {% load tree_menu %}
+        {% draw_menu 'main_menu' %}
+        <h2>Тест</h2>
+    </div>
+</body>
+</html> 
